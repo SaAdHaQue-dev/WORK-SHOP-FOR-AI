@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Future is Now: AI Revolution Workshop | 2026 Interactive Keynote</title>
+  <meta name="description" content="Interactive 5-part AI workshop presentation for high school and college students. Real-time vision sandbox, live code generator, architecture deconstruction, and future career matrix.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="presentation-mode">
+  <!-- Dynamic Cyber Grid & Particle Canvas Background -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Top Navigation & Presentation Controls Bar -->
+  <header class="top-bar">
+    <div class="brand-pill">
+      <span class="live-dot"></span>
+      <span class="brand-text">AI WORKSHOP 2026</span>
+      <span class="badge">KEYNOTE V2.6</span>
+    </div>
+
+    <!-- Slide Navigation Tabs -->
+    <nav class="slide-nav-tabs" aria-label="Slide Navigation">
+      <button class="nav-tab active" data-slide="0"><span>01</span> Evolution</button>
+      <button class="nav-tab" data-slide="1"><span>02</span> Playground</button>
+      <button class="nav-tab" data-slide="2"><span>03</span> AI vs You</button>
+      <button class="nav-tab" data-slide="3"><span>04</span> Neural Box</button>
+      <button class="nav-tab" data-slide="4"><span>05</span> Vault & QR</button>
+    </nav>
+
+    <!-- Presentation Tools & Remote Controls -->
+    <div class="header-controls">
+      <button id="btn-live-hook" class="action-btn hook-btn" title="Live Audience Icebreaker Hook (First 2 Mins)">
+        <span class="btn-icon">⚡</span>
+        <span class="btn-label">2-Min Hook</span>
+      </button>
+      <button id="btn-presenter-notes" class="action-btn" title="Toggle Presenter Speaker Notes [N]">
+        <span class="btn-icon">🎙️</span>
+        <span class="btn-label">Speaker Notes</span>
+      </button>
+      <button id="btn-sound" class="action-btn icon-only" title="Toggle Tech SFX [M]">
+        <span id="sound-icon">🔊</span>
+      </button>
+      <button id="btn-fullscreen" class="action-btn icon-only" title="Toggle Fullscreen [F]">
+        <span id="fs-icon">⛶</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Slide Viewport (Smooth Snap Deck) -->
+  <main class="slide-deck" id="slide-deck">
+
+    <!-- ==========================================
+         SLIDE 1: THE "MIND BLOWN" TIMELINE
+         ========================================== -->
+    <section class="slide-section active" id="slide-0" data-index="0">
+      <div class="slide-container">
+        <div class="slide-header">
+          <div class="section-tag">SLIDE 01 // PARADIGM SHIFT</div>
+          <h1 class="slide-title">The <span class="gradient-text">"Mind Blown"</span> Timeline</h1>
+          <p class="slide-subtitle">
+            Human tool evolution took <strong>300,000 years</strong>. AI covered text to autonomous humanoid robotics in just <strong>48 months</strong>.
+          </p>
+        </div>
+
+        <div class="timeline-hero-grid">
+          <!-- Main Interactive Timeline Display -->
+          <div class="timeline-card glass-panel spotlight-card">
+            <div class="timeline-year-selector">
+              <button class="year-pill" data-year="2022">
+                <span class="pill-year">2022</span>
+                <span class="pill-label">Text Era</span>
+              </button>
+              <button class="year-pill" data-year="2023">
+                <span class="pill-year">2023</span>
+                <span class="pill-label">Multimodal</span>
+              </button>
+              <button class="year-pill" data-year="2024">
+                <span class="pill-year">2024</span>
+                <span class="pill-label">Reasoning & Video</span>
+              </button>
+              <button class="year-pill" data-year="2025">
+                <span class="pill-year">2025</span>
+                <span class="pill-label">Agent Swarms</span>
+              </button>
+              <button class="year-pill active" data-year="2026">
+                <span class="pill-year">2026</span>
+                <span class="pill-label">Embodied AI</span>
+              </button>
+            </div>
+
+            <!-- Scrub Slider with visual ticks -->
+            <div class="slider-wrapper">
+              <input type="range" id="timeline-range" min="2022" max="2026" value="2026" step="1">
+              <div class="slider-track-glow"></div>
+            </div>
+
+            <!-- Dynamic Year Content Showcase -->
+            <div class="timeline-detail-box" id="timeline-detail">
+              <!-- Rendered dynamically by JS -->
+            </div>
+          </div>
+
+          <!-- Human vs Machine Speed Comparison Box -->
+          <div class="speed-matrix-card glass-panel">
+            <div class="card-badge">⚡ EXPONENTIAL VELOCITY</div>
+            <h3 class="card-title">Human Pace vs. AI Pace</h3>
+            <p class="card-desc">Compare real-world intellectual tasks between classical human limits and 2026 AI compute:</p>
+
+            <div class="metric-comparison-list">
+              <div class="metric-row">
+                <div class="metric-info">
+                  <span class="task-name">Reading 100 Thick Books</span>
+                  <div class="bars-container">
+                    <div class="bar-group">
+                      <span class="bar-tag">Human</span>
+                      <div class="bar-track"><div class="bar-fill human-bar" style="width: 95%;"></div></div>
+                      <span class="bar-val">~6 Months</span>
+                    </div>
+                    <div class="bar-group">
+                      <span class="bar-tag">AI</span>
+                      <div class="bar-track"><div class="bar-fill ai-bar" style="width: 8%;"></div></div>
+                      <span class="bar-val">0.3 Seconds</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="metric-row">
+                <div class="metric-info">
+                  <span class="task-name">Decoding 200M Protein Structures</span>
+                  <div class="bars-container">
+                    <div class="bar-group">
+                      <span class="bar-tag">Human Labs</span>
+                      <div class="bar-track"><div class="bar-fill human-bar" style="width: 100%;"></div></div>
+                      <span class="bar-val">Millions of Years</span>
+                    </div>
+                    <div class="bar-group">
+                      <span class="bar-tag">AlphaFold 3</span>
+                      <div class="bar-track"><div class="bar-fill ai-bar" style="width: 12%;"></div></div>
+                      <span class="bar-val">A Few Weeks</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="metric-row">
+                <div class="metric-info">
+                  <span class="task-name">Writing Production Software</span>
+                  <div class="bars-container">
+                    <div class="bar-group">
+                      <span class="bar-tag">Manual Dev</span>
+                      <div class="bar-track"><div class="bar-fill human-bar" style="width: 85%;"></div></div>
+                      <span class="bar-val">Weeks of Typing</span>
+                    </div>
+                    <div class="bar-group">
+                      <span class="bar-tag">Agentic AI</span>
+                      <div class="bar-track"><div class="bar-fill ai-bar" style="width: 15%;"></div></div>
+                      <span class="bar-val">30-60 Seconds</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="key-takeaway-pill">
+              💡 <strong>Key Takeaway for Students:</strong> "AI won't replace you, but a student using AI will replace a student ignoring it."
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 2: REAL-TIME LIVE AI PLAYGROUND
+         ========================================== -->
+    <section class="slide-section" id="slide-1" data-index="1">
+      <div class="slide-container">
+        <div class="slide-header">
+          <div class="section-tag">SLIDE 02 // SHOWSTOPPER DEMO</div>
+          <h1 class="slide-title">Real-Time <span class="gradient-text">Live AI Playground</span></h1>
+          <p class="slide-subtitle">
+            Zero latency. Zero theoretical talk. Watch live synthesis and browser vision AI in action right now!
+          </p>
+        </div>
+
+        <!-- Playground Dual-Deck (App Generator vs Computer Vision) -->
+        <div class="playground-grid">
+          <!-- Left: Live Instant App / Game Generator -->
+          <div class="playground-pane glass-panel">
+            <div class="pane-header">
+              <div class="pane-title-group">
+                <span class="pane-icon">⚡</span>
+                <div>
+                  <h3 class="pane-title">Instant Live App Generator</h3>
+                  <span class="pane-subtitle">Live prompt-to-playable game compiler</span>
+                </div>
+              </div>
+              <span class="live-status-pill">CLIENT COMPILER READY</span>
+            </div>
+
+            <!-- Prompt Bar & Quick Preset Chips -->
+            <div class="generator-controls">
+              <div class="prompt-chips-row">
+                <span class="chips-label">Student Prompts:</span>
+                <button class="prompt-chip active" data-app="tictactoe">🎮 Unbeatable Tic-Tac-Toe AI</button>
+                <button class="prompt-chip" data-app="pong">🏓 Neon Cyber Pong</button>
+                <button class="prompt-chip" data-app="reflex">⚡ AI Neural Reflex Matrix</button>
+                <button class="prompt-chip" data-app="gravity">🌌 Quantum Particle Well</button>
+              </div>
+
+              <div class="custom-prompt-input-row">
+                <input type="text" id="custom-app-prompt" placeholder="Ask workshop audience: What mini-game or widget should we spawn?" value="Make a futuristic Tic-Tac-Toe with an unbeatable AI bot!">
+                <button id="btn-compile-app" class="btn-primary">
+                  <span class="btn-spinner" id="compiler-spinner"></span>
+                  <span class="btn-text">⚡ Generate & Run</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Live Output Canvas / Sandboxed Stage -->
+            <div class="sandbox-stage-wrapper">
+              <!-- Simulated Code Stream Terminal Overlay during build -->
+              <div class="compiler-terminal" id="compiler-terminal">
+                <div class="terminal-line"><span class="t-cyan">> [NEURAL COMPILER]</span> Parsing user prompt tokens...</div>
+                <div class="terminal-line"><span class="t-purple">> [AST SYNTHESIZER]</span> Constructing DOM canvas elements & physics loops...</div>
+                <div class="terminal-line"><span class="t-green">> [EXECUTE]</span> Injecting runtime sandbox into viewport in 0.28s!</div>
+              </div>
+
+              <!-- Sandboxed Interactive Container -->
+              <div class="sandbox-container" id="sandbox-container">
+                <!-- Mini-game injected dynamically here -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: In-Browser Vision & Face Landmark Sandbox -->
+          <div class="playground-pane glass-panel">
+            <div class="pane-header">
+              <div class="pane-title-group">
+                <span class="pane-icon">👁️</span>
+                <div>
+                  <h3 class="pane-title">Vision & Spatial AI Sandbox</h3>
+                  <span class="pane-subtitle">Zero-latency biometric landmarks & tracking</span>
+                </div>
+              </div>
+              <div class="camera-toggle-group">
+                <button id="btn-toggle-camera" class="cam-btn">
+                  <span class="cam-icon">📹</span>
+                  <span id="cam-btn-text">Start Webcam</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Vision Display Container -->
+            <div class="vision-display-wrapper">
+              <video id="webcam-video" autoplay playsinline muted></video>
+              <canvas id="vision-overlay-canvas"></canvas>
+
+              <!-- Cyber HUD Data Overlay -->
+              <div class="vision-hud-overlay">
+                <div class="hud-corner top-left">
+                  <div class="hud-stat"><span class="stat-lbl">TRACKING:</span> <span class="stat-val" id="hud-status">STANDBY / DEMO MESH</span></div>
+                  <div class="hud-stat"><span class="stat-lbl">LATENCY:</span> <span class="stat-val text-green" id="hud-latency">4.2 ms (Local)</span></div>
+                </div>
+                <div class="hud-corner top-right">
+                  <div class="hud-stat"><span class="stat-lbl">CONFIDENCE:</span> <span class="stat-val text-cyan" id="hud-confidence">99.4%</span></div>
+                  <div class="hud-stat"><span class="stat-lbl">LANDMARKS:</span> <span class="stat-val">68 3D Points</span></div>
+                </div>
+                <div class="hud-corner bottom-left">
+                  <div class="hud-stat"><span class="stat-lbl">EMOTION ESTIMATE:</span> <span class="stat-val" id="hud-emotion">Curious / Attentive (94%)</span></div>
+                  <div class="hud-stat"><span class="stat-lbl">HEAD POSE:</span> <span class="stat-val" id="hud-pose">Yaw: +1.2° | Pitch: -0.8°</span></div>
+                </div>
+                <div class="hud-corner bottom-right">
+                  <div class="hud-chip">EDGE INFERENCE ONLY</div>
+                </div>
+              </div>
+
+              <!-- Fallback Simulated Face Guide if camera is not active -->
+              <div class="vision-demo-prompt" id="vision-demo-banner">
+                <span>📹 Click <strong>"Start Webcam"</strong> above for live student face detection, or interact with the virtual landmark scanner below!</span>
+              </div>
+            </div>
+
+            <!-- Vision Mode Switcher -->
+            <div class="vision-controls-row">
+              <span class="chips-label">AI Overlay Filter:</span>
+              <button class="vision-mode-chip active" data-mode="landmarks">🕸️ Neural Face Mesh</button>
+              <button class="vision-mode-chip" data-mode="bounding">📦 Bounding Box & HUD</button>
+              <button class="vision-mode-chip" data-mode="cyberpunk">🤖 Cyber Augmented Persona</button>
+              <button class="vision-mode-chip" data-mode="matrix">🟢 Matrix Flow Stream</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 3: "AI VS YOU" CAREER & FUTURE MATRIX
+         ========================================== -->
+    <section class="slide-section" id="slide-2" data-index="2">
+      <div class="slide-container">
+        <div class="slide-header">
+          <div class="section-tag">SLIDE 03 // STUDENT REALITY CHECK</div>
+          <h1 class="slide-title">"AI vs You" <span class="gradient-text">Career & Future Matrix</span></h1>
+          <p class="slide-subtitle">
+            Class 11 & 12 Decision: Whether you take <strong>PCM, Biology, Commerce, or Arts</strong>—AI is rewriting your future industry right now.
+          </p>
+        </div>
+
+        <!-- Stream Selector Bar -->
+        <div class="career-stream-selector">
+          <button class="stream-tab active" data-stream="pcm">
+            <span class="stream-icon">⚡</span>
+            <div class="stream-meta">
+              <span class="stream-name">PCM & Engineering</span>
+              <span class="stream-sub">CS, Mechanical, Aerospace, Physics</span>
+            </div>
+          </button>
+          <button class="stream-tab" data-stream="biology">
+            <span class="stream-icon">🧬</span>
+            <div class="stream-meta">
+              <span class="stream-name">Biology & Medicine</span>
+              <span class="stream-sub">NEET, MBBS, Biotech, Pharma</span>
+            </div>
+          </button>
+          <button class="stream-tab" data-stream="commerce">
+            <span class="stream-icon">📈</span>
+            <div class="stream-meta">
+              <span class="stream-name">Commerce & Finance</span>
+              <span class="stream-sub">FinTech, CA, Quant Trading, Economics</span>
+            </div>
+          </button>
+          <button class="stream-tab" data-stream="arts">
+            <span class="stream-icon">🎨</span>
+            <div class="stream-meta">
+              <span class="stream-name">Arts, Media & Design</span>
+              <span class="stream-sub">Cinema, Architecture, UI/UX, Storytelling</span>
+            </div>
+          </button>
+          <button class="stream-tab" data-stream="law">
+            <span class="stream-icon">⚖️</span>
+            <div class="stream-meta">
+              <span class="stream-name">Law & Humanities</span>
+              <span class="stream-sub">Judiciary, Ethics, Public Policy</span>
+            </div>
+          </button>
+        </div>
+
+        <!-- Dynamic Stream Details Card -->
+        <div class="career-content-deck glass-panel" id="career-content-deck">
+          <!-- Rendered dynamically via JS based on selected stream -->
+        </div>
+
+        <!-- Interactive Future Readiness Compass -->
+        <div class="future-skills-bar glass-panel">
+          <div class="compass-label">
+            <span class="compass-badge">CRITICAL INSIGHT</span>
+            <h4>What Skills Can AI NEVER Replace In You?</h4>
+          </div>
+          <div class="skills-comparison-grid">
+            <div class="skill-category safe">
+              <span class="cat-title">🛡️ 100% Future-Proof (Focus Here!)</span>
+              <ul class="cat-tags">
+                <li>✨ First-Principles Problem Solving</li>
+                <li>🤝 Human Empathy & Psychological Trust</li>
+                <li>🎯 Taste, Intuition & Ethical Leadership</li>
+                <li>⚙️ System Architecture & Prompt Orchestration</li>
+              </ul>
+            </div>
+            <div class="skill-category risky">
+              <span class="cat-title">⚠️ Rapidly Automating (Don't Rely Only On This)</span>
+              <ul class="cat-tags">
+                <li>❌ Rote Memorization of Formulae</li>
+                <li>❌ Repetitive Boilerplate Coding</li>
+                <li>❌ Basic Data Entry & Manual Bookkeeping</li>
+                <li>❌ Standard Stock Art / Basic Asset Creation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 4: "DECONSTRUCT THE BLACK BOX"
+         ========================================== -->
+    <section class="slide-section" id="slide-3" data-index="3">
+      <div class="slide-container">
+        <div class="slide-header">
+          <div class="section-tag">SLIDE 04 // DEMYSTIFYING THE MAGIC</div>
+          <h1 class="slide-title">Deconstruct the <span class="gradient-text">"Black Box"</span></h1>
+          <p class="slide-subtitle">
+            No complex PhD mathematics. See how Neural Networks and Transformers predict the next thought token by token.
+          </p>
+        </div>
+
+        <div class="transformer-lab-container glass-panel">
+          <!-- User Prompt Tokenizer Experimenter -->
+          <div class="lab-input-strip">
+            <div class="input-col">
+              <label for="neural-input-prompt">Input Prompt to Feed the Neural Model:</label>
+              <div class="input-with-button">
+                <input type="text" id="neural-input-prompt" value="The autonomous AI agent solved the complex" placeholder="Type any sentence here...">
+                <button id="btn-run-neural-flow" class="btn-primary">
+                  <span>⚡ Propagate Network</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Temperature Slider -->
+            <div class="param-slider-col">
+              <div class="slider-header">
+                <span class="param-name">Model Temperature (Creativity):</span>
+                <span class="param-val" id="temp-display">0.7 (Balanced)</span>
+              </div>
+              <input type="range" id="temp-range" min="0.1" max="1.5" step="0.1" value="0.7">
+              <div class="slider-hints">
+                <span>0.1 (Strict & Deterministic)</span>
+                <span>1.5 (Creative / Wild)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual 5-Stage Transformer Pipeline Diagram -->
+          <div class="pipeline-flow-diagram">
+            <!-- Stage 1: Tokenizer -->
+            <div class="flow-stage" id="stage-tokens">
+              <div class="stage-badge">STAGE 1</div>
+              <h4 class="stage-title">Tokenization</h4>
+              <p class="stage-desc">Splits words into numeric token IDs</p>
+              <div class="tokens-display-box" id="tokens-display">
+                <!-- Dynamically generated tokens -->
+              </div>
+            </div>
+
+            <div class="flow-connector"><span class="flow-arrow">➔</span></div>
+
+            <!-- Stage 2: Embedding Space -->
+            <div class="flow-stage" id="stage-embeddings">
+              <div class="stage-badge">STAGE 2</div>
+              <h4 class="stage-title">Vector Embedding</h4>
+              <p class="stage-desc">Maps tokens to 4,096-dimensional coordinates</p>
+              <div class="embedding-visual-box">
+                <div class="vector-point point-1">[0.84, -0.32, 0.91]</div>
+                <div class="vector-point point-2">[-0.12, 0.77, -0.45]</div>
+                <div class="vector-point point-3">[0.55, 0.63, 0.18]</div>
+              </div>
+            </div>
+
+            <div class="flow-connector"><span class="flow-arrow">➔</span></div>
+
+            <!-- Stage 3: Self-Attention Web -->
+            <div class="flow-stage active-pulse" id="stage-attention">
+              <div class="stage-badge">STAGE 3 (CORE)</div>
+              <h4 class="stage-title">Self-Attention Matrix</h4>
+              <p class="stage-desc">Which words look at which words?</p>
+              <div class="attention-web-container" id="attention-web">
+                <!-- Interactive attention links drawn here -->
+                <div class="attention-hint">Hover over words to see attention weights!</div>
+              </div>
+            </div>
+
+            <div class="flow-connector"><span class="flow-arrow">➔</span></div>
+
+            <!-- Stage 4: Feed Forward & Softmax -->
+            <div class="flow-stage" id="stage-softmax">
+              <div class="stage-badge">STAGE 4</div>
+              <h4 class="stage-title">Softmax Probabilities</h4>
+              <p class="stage-desc">Next token candidate odds</p>
+              <div class="probabilities-rank-list" id="probabilities-rank">
+                <!-- Probabilities injected here -->
+              </div>
+            </div>
+
+            <div class="flow-connector"><span class="flow-arrow">➔</span></div>
+
+            <!-- Stage 5: Generation Output -->
+            <div class="flow-stage highlight-output" id="stage-output">
+              <div class="stage-badge">STAGE 5</div>
+              <h4 class="stage-title">Emitted Token</h4>
+              <p class="stage-desc">Final chosen completion</p>
+              <div class="emitted-token-box" id="emitted-token-display">
+                <span class="chosen-token">puzzle</span>
+                <span class="gen-time">⚡ 28ms latency</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plain Hinglish/English Analogy Explanation Box -->
+          <div class="analogy-card">
+            <span class="analogy-icon">💡</span>
+            <div class="analogy-text">
+              <strong>Simple Analogy for Workshop Students:</strong> 
+              "Jaise aap kisi dost se baat karte waqt pehle se predict kar lete hain ki agla word wo kya bolne wala hai, Transformers bhi vahi karte hain—par unhone internet ki lakho kitabein padh kar har word ke relation ka math pehle se calculate kiya hua hai!"
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SLIDE 5: THE "NEXT STEPS" RESOURCE VAULT
+         ========================================== -->
+    <section class="slide-section" id="slide-4" data-index="4">
+      <div class="slide-container">
+        <div class="slide-header">
+          <div class="section-tag">SLIDE 05 // ACTIONABLE LAUNCHPAD</div>
+          <h1 class="slide-title">The "Next Steps" <span class="gradient-text">Resource Vault</span></h1>
+          <p class="slide-subtitle">
+            Don't just watch. Build. Scan the QR code, get free APIs, download the student roadmap, and start coding today.
+          </p>
+        </div>
+
+        <div class="vault-grid">
+          <!-- Left: Live QR Code & Mobile Launch Card -->
+          <div class="qr-vault-card glass-panel spotlight-card">
+            <div class="card-badge">📱 SCAN WITH PHONE CAMERA</div>
+            <h3 class="card-title">Live Student Portal</h3>
+            <p class="card-desc">Take this entire presentation & tools home on your mobile right now:</p>
+
+            <div class="qr-display-box">
+              <div class="qr-canvas-container" id="qr-container">
+                <!-- Dynamic QR code rendered by JS -->
+                <canvas id="qr-canvas"></canvas>
+              </div>
+              <div class="qr-caption">
+                <span class="qr-url-text" id="qr-url-text">https://github.com/ai-workshop-2026</span>
+                <button id="btn-copy-url" class="btn-copy" title="Copy URL">📋 Copy Link</button>
+              </div>
+            </div>
+
+            <!-- Dynamic URL Customizer for Presenter -->
+            <div class="url-customizer-box">
+              <label for="custom-qr-input">Presenter: Enter your live workshop URL or repo:</label>
+              <div class="qr-input-row">
+                <input type="text" id="custom-qr-input" value="https://ai-workshop-2026.vercel.app">
+                <button id="btn-update-qr" class="btn-secondary">Update QR</button>
+              </div>
+            </div>
+
+            <div class="download-roadmap-action">
+              <button id="btn-download-roadmap" class="btn-primary full-width">
+                <span>📥 Download 90-Day High School AI Roadmap (PDF / MD)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Free APIs, Python Libraries & 90-Day Roadmap -->
+          <div class="resources-vault-card glass-panel">
+            <div class="vault-tabs-header">
+              <button class="vault-tab active" data-vault="apis">🌐 100% Free AI APIs</button>
+              <button class="vault-tab" data-vault="libraries">🐍 Essential Python Stack</button>
+              <button class="vault-tab" data-vault="roadmap">🗺️ 90-Day Student Roadmap</button>
+            </div>
+
+            <!-- Vault Pane 1: Free APIs -->
+            <div class="vault-pane active" id="vault-apis">
+              <div class="resource-cards-list">
+                <div class="res-card">
+                  <div class="res-meta">
+                    <span class="res-name">⚡ Groq Cloud API</span>
+                    <span class="res-pill free">Free Fast Tier</span>
+                  </div>
+                  <p class="res-desc">Runs Llama 3 at 500+ tokens/second for free! Fastest inference in the world for building student bots.</p>
+                  <code class="res-code">pip install groq</code>
+                </div>
+
+                <div class="res-card">
+                  <div class="res-meta">
+                    <span class="res-name">✨ Google Gemini API</span>
+                    <span class="res-pill free">1M Token Window</span>
+                  </div>
+                  <p class="res-desc">Free tier allows generous requests per minute. Accepts images, audio, video and code files natively.</p>
+                  <code class="res-code">pip install google-generativeai</code>
+                </div>
+
+                <div class="res-card">
+                  <div class="res-meta">
+                    <span class="res-name">🤗 Hugging Face Inference API</span>
+                    <span class="res-pill free">500,000+ Models</span>
+                  </div>
+                  <p class="res-desc">Free access to open-weights models for sentiment analysis, vision, voice synthesis, and translation.</p>
+                  <code class="res-code">npm install @huggingface/inference</code>
+                </div>
+
+                <div class="res-card">
+                  <div class="res-meta">
+                    <span class="res-name">🦙 Ollama Local Runner</span>
+                    <span class="res-pill free">100% Offline</span>
+                  </div>
+                  <p class="res-desc">Run open-source models completely offline on your school laptop without internet or API keys.</p>
+                  <code class="res-code">ollama run deepseek-r1:8b</code>
+                </div>
+              </div>
+            </div>
+
+            <!-- Vault Pane 2: Python Stack -->
+            <div class="vault-pane" id="vault-libraries">
+              <div class="resource-cards-list">
+                <div class="res-card">
+                  <div class="res-meta">
+                    <span class="res-name">🔥 PyTorch</span>
+                    <span class="res-pill core">Deep Learning Core</span>
+                  </div>
+                  <p class="res-desc">The industry standard neural network framework used by OpenAI, Google, Meta, and Tesla.</p>
+                  <div class="res-starter">What to learn: Tensors, autograd, building a 2-layer Neural Network.</div>
+                </div>
+
+                <div class="res-card">
+                  <div class="res-meta">
+                    <span class="res-name">🦜️🔗 LangChain & LlamaIndex</span>
+                    <span class="res-pill core">Agent & RAG Stack</span>
+                  </div>
+                  <p class="res-desc">Connect LLMs to PDF files, databases, search engines, and create autonomous task agents.</p>
+                  <div class="res-starter">What to learn: Vector embeddings, ChromaDB, document chunking.</div>
+                </div>
+
+                <div class="res-card">
+                  <div class="res-meta">
+                    <span class="res-name">📷 MediaPipe & OpenCV</span>
+                    <span class="res-pill core">Vision & Spatial AI</span>
+                  </div>
+                  <p class="res-desc">Detect face landmarks, hands, gestures, and objects in real-time with less than 15 lines of code.</p>
+                  <div class="res-starter">What to learn: WebCam capture, landmark indexing, gesture triggers.</div>
+                </div>
+
+                <div class="res-card">
+                  <div class="res-meta">
+                    <span class="res-name">⚡ Transformers.js</span>
+                    <span class="res-pill core">Web AI</span>
+                  </div>
+                  <p class="res-desc">Run real transformer models directly inside Chrome/Edge using WebGPU with zero server costs.</p>
+                  <div class="res-starter">What to learn: In-browser embeddings, client-side Whisper speech.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Vault Pane 3: 90-Day Student Roadmap -->
+            <div class="vault-pane" id="vault-roadmap">
+              <div class="roadmap-timeline">
+                <div class="roadmap-step">
+                  <div class="step-badge">DAYS 1-30</div>
+                  <div class="step-content">
+                    <h5>Month 1: Python Fundamentals & Math Intuition</h5>
+                    <p>Python data structures, NumPy matrices, Matplotlib visualizations. Understand what vectors and dot products mean visually.</p>
+                    <span class="step-milestone">🎯 Milestone Project: Build an automated CSV data analyst bot in terminal.</span>
+                  </div>
+                </div>
+
+                <div class="roadmap-step">
+                  <div class="step-badge">DAYS 31-60</div>
+                  <div class="step-content">
+                    <h5>Month 2: Computer Vision & Machine Learning</h5>
+                    <p>MediaPipe hand gestures, Scikit-Learn basic classifiers. Train an image classifier on custom dataset using Teachable Machine.</p>
+                    <span class="step-milestone">🎯 Milestone Project: Gesture-controlled computer volume or virtual game controller.</span>
+                  </div>
+                </div>
+
+                <div class="roadmap-step">
+                  <div class="step-badge">DAYS 61-90</div>
+                  <div class="step-content">
+                    <h5>Month 3: LLM Apps, RAG & Autonomous Agents</h5>
+                    <p>Prompt engineering, Groq/Gemini API calls, RAG on school textbooks, Streamlit web UI deployment.</p>
+                    <span class="step-milestone">🎯 Milestone Project: "AI Study Buddy" that answers doubts directly from NCERT/CBSE books!</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Presentation Remote Navigation Bar -->
+  <footer class="bottom-presenter-bar">
+    <div class="remote-shortcuts-hint">
+      <span class="key-hint"><kbd>◀</kbd><kbd>▶</kbd> Slide Remote</span>
+      <span class="key-hint"><kbd>F</kbd> Fullscreen</span>
+      <span class="key-hint"><kbd>N</kbd> Notes</span>
+      <span class="key-hint"><kbd>M</kbd> SFX</span>
+    </div>
+
+    <!-- Slide Indicators -->
+    <div class="slide-dots-container" id="slide-dots">
+      <button class="dot-btn active" data-slide="0" title="Slide 1: Evolution"></button>
+      <button class="dot-btn" data-slide="1" title="Slide 2: Playground"></button>
+      <button class="dot-btn" data-slide="2" title="Slide 3: Career Matrix"></button>
+      <button class="dot-btn" data-slide="3" title="Slide 4: Neural Box"></button>
+      <button class="dot-btn" data-slide="4" title="Slide 5: Resource Vault"></button>
+    </div>
+
+    <!-- Next / Prev Buttons for wireless remotes -->
+    <div class="remote-arrow-controls">
+      <button id="btn-prev-slide" class="remote-btn" title="Previous Slide [Left Arrow]">
+        <span>◀ Prev Slide</span>
+      </button>
+      <button id="btn-next-slide" class="remote-btn primary" title="Next Slide [Right Arrow]">
+        <span>Next Slide ▶</span>
+      </button>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       MODAL 1: FIRST 2 MINUTES HOOK & AUDIENCE ICEBREAKER
+       ========================================== -->
+  <div class="modal-backdrop" id="modal-hook">
+    <div class="modal-window glass-panel spotlight-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="badge-pulsing">LIVE ICEBREAKER</span>
+          <h2>The First 2 Minutes Workshop Hook</h2>
+        </div>
+        <button class="modal-close-btn" id="btn-close-hook">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="hook-grid">
+          <!-- Hook Step 1: Live Interactive Hands Counter -->
+          <div class="hook-box">
+            <h4>1. Ask the Audience (Click to Tally Live!):</h4>
+            <div class="poll-question-item">
+              <div class="poll-row">
+                <span>"Kitne logon ne ChatGPT ya AI use kiya hai?"</span>
+                <button class="poll-tally-btn" id="poll-1-btn">+ Vote (<span id="poll-1-count">48</span>)</button>
+              </div>
+              <div class="poll-bar-track"><div class="poll-bar-fill" id="poll-1-fill" style="width: 88%;"></div></div>
+            </div>
+
+            <div class="poll-question-item">
+              <div class="poll-row">
+                <span>"Kitne logon ne kabhi thoda bhi code likha hai?"</span>
+                <button class="poll-tally-btn" id="poll-2-btn">+ Vote (<span id="poll-2-count">14</span>)</button>
+              </div>
+              <div class="poll-bar-track"><div class="poll-bar-fill" id="poll-2-fill" style="width: 28%;"></div></div>
+            </div>
+
+            <div class="poll-question-item">
+              <div class="poll-row">
+                <span>"Kisko lagta hai AI insaano ki jobs khatam karega?"</span>
+                <button class="poll-tally-btn" id="poll-3-btn">+ Vote (<span id="poll-3-count">36</span>)</button>
+              </div>
+              <div class="poll-bar-track"><div class="poll-bar-fill" id="poll-3-fill" style="width: 65%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Hook Step 2: Speaker Opening Pitch / Script -->
+          <div class="hook-script-box">
+            <h4>2. Speaker Opening Hook Script (Hinglish):</h4>
+            <div class="script-bubble">
+              <p>
+                <em>"Agli 45 minutes me, main aapko koi boring lecture nahi dunga. Aaj hum dekhenge ki kaise ek 17 saal ka student apne room me baith kar akele ek poori company jitna software AI ke saath build kar sakta hai. Screen par dhyan se dekhiye..."</em>
+              </p>
+            </div>
+            <div class="hook-action-row">
+              <button id="btn-start-presentation" class="btn-primary full-width">
+                <span>🚀 Launch Slide 1 & Start Workshop</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL 2: PRESENTER NOTES (SPEAKER HUD)
+       ========================================== -->
+  <div class="modal-backdrop" id="modal-notes">
+    <div class="modal-window notes-modal glass-panel">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="badge">PRESENTER HUD [N]</span>
+          <h3 id="notes-slide-title">Presenter Notes: Slide 1</h3>
+        </div>
+        <button class="modal-close-btn" id="btn-close-notes">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="notes-content-box" id="notes-content">
+          <!-- Dynamically populated based on active slide -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
